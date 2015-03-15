@@ -1,39 +1,20 @@
 #include <iostream>
-
-using namespace std;
-
-class testClass
-{
-    public:
-    testClass() {}
-    virtual ~testClass() {}
-    
-    void OutputMethodNoArgs()
-    {
-        cout << "Hello World from method" << endl;
-    }
-    
-    void OutputMethodWithArgs( const string& stringIn )
-    {
-        cout << stringIn << endl;
-    }
-    
-};  // end testClass
+#include "testClass.h"
 
 int main()
 {
     // testing direct route
-   cout << "Hello World" << endl;
+   std::cout << "Hello World" << std::endl;
     
     // testing from string
-   string outputString = "Hello World from string";
-    cout << outputString << endl;
+    std::string outputString = "Hello World from string";
+    std::cout << outputString << std::endl;
     
     // testing from function call
     testClass newObj;
     newObj.OutputMethodNoArgs();
     
-    string passedString = "Hello World passed into function";
+    std::string passedString = "Hello World passed into function";
     newObj.OutputMethodWithArgs( passedString );
  
     return 0;
